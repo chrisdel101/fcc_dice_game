@@ -8,13 +8,13 @@
 // called at bottom
 const main = () => {
   try {
-    const runs = 5
+    const runs = 10000
     const dice = 5
     const startTime = performance.now()
     //   run all the games simulations
     const scores = gameRunner(runs, dice)
     //   print the desired outputs
-    processScores(scores, runs, dice)
+    printScores(scores, runs, dice)
     const endTime = performance.now()
     //   print the time taken
     const elapsedTime = endTime - startTime
@@ -26,7 +26,7 @@ const main = () => {
 // INPUT(3): obj - object of key/val pairs, int - number of runs, int- dice use
 // OUTPUT: none
 // DESC: prints the desired output to console
-const processScores = (scores, totalRuns, dice) => {
+const printScores = (scores, totalRuns, dice) => {
   console.log(`Number of simulations was ${totalRuns} using ${dice} dice.`)
   scores &&
     totalRuns > 0 &&
